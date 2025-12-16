@@ -1,1 +1,12 @@
+CREATE TABLE users (
+  user_id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50),
+  role VARCHAR(10)
+);
 
+CREATE TABLE exam_logs (
+  log_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  activity_type VARCHAR(50),
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
